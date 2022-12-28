@@ -442,12 +442,12 @@
           <p class="join-title">Підпишіться на розсилку</p>
           <div class="join-thumb">
             <input type="email" name="email" class="join-input" placeholder="E-mail" required/>    
-            <div class="join-btn-thumb">
-              <button type="submit" class="primary-btn join-btn">Підписатися</button>
+            <button type="submit" class="primary-btn join-btn">
+              Підписатися
               <svg class="send-icon">
                 <use href="./images/icons.svg#icon-send" width="24" height="24"></use>
               </svg>
-            </div>
+            </button>
           </div>
         </form>
       </div>
@@ -463,37 +463,40 @@
 
         <form class="person-form">
           <p class="person-form-title">Залиште свої дані, ми вам передзвонимо</p>
-          <label class="person-form-label">
-            <span class="person-label-text">Ім'я</span>  
-            <span class="person-form-input-wrapper">
-              <input type="text" name="name" class="person-form-input" required>
-              <svg class="form-input-icon" width="12" height="12">
-                <use href="./images/icons.svg#icon-person"></use>
-              </svg>
-            </span> 
-          </label>
-          <label class="person-form-label">
-            <span class="person-label-text">Телефон</span> 
-            <span class="person-form-input-wrapper">
-              <input type="tel" name="phone" class="person-form-input" required>
+          
+          <label for="form-name" class="person-form-label"><span class="person-label-text">Ім'я</span></label>
+            <div class="person-form-input-wrapper">
+              <input type="text" name="name" class="person-form-input" id="form-name" required>
               <svg class="form-input-icon" width="13" height="13">
-                <use href="./images/icons.svg#icon-phone_form"></use>
-              </svg>
-            </span>  
-          </label>
-          <label class="person-form-label">
-            <span class="person-label-text">Пошта</span>
-            <span class="person-form-input-wrapper">
-              <input type="email" name="email" class="person-form-input" required>
-              <svg class="form-input-icon" width="15" height="12">
+                <use href="./images/icons.svg#icon-person"></use>
+              </svg>          
+            </div>       
+         
+          <label for="form-phone"><span class="person-label-text">Телефон</span></label>
+          <div class="person-form-input-wrapper">
+            <input type="tel" name="phone" class="person-form-input" id="form-phone" required>
+            <svg class="form-input-icon" width="14" height="14">
+              <use href="./images/icons.svg#icon-phone_form"></use>
+            </svg>
+          </div>  
+          
+          <label for="form-email"><span class="person-label-text">Пошта</span></label>           
+            <div class="person-form-input-wrapper">
+              <input type="email" name="email" class="person-form-input" id="form-email" required>
+              <svg class="form-input-icon" width="16" height="15">
                 <use href="./images/icons.svg#icon-email-form"></use>
               </svg>
-            </span> 
-          </label>
-          <label class="person-form-label-message">
-            <span class="person-label-text">Коментар</span>
-            <textarea name="message" placeholder="Введіть текст" class="person-form-message"></textarea>
-          </label>
+            </div> 
+          
+          <label for="form-message"><span class="person-label-text">Коментар</span></label>           
+          <textarea 
+            name="message" 
+            placeholder="Введіть текст" 
+            class="person-form-message" 
+            id="form-message"
+          >
+          </textarea>
+          
           <div class="person-checkbox-wrapper">
             <input type="checkbox" name="accept" id="person-checkbox" class="person-form-checkbox visual-hidden" required>
             <label class="person-checkbox-label" for="person-checkbox">
@@ -507,6 +510,8 @@
 
       </div>
     </div>
+
+    <script src="./js/modal.js"></script>
+
   </body>
-  <script src="./js/modal.js"></script>
 </html>

@@ -639,11 +639,8 @@ img {
   background: #2F303A;
 }
 
-.join-btn-thumb {
-  position: relative;
-}
-
 .join-btn {
+  position: relative;
   padding-left: 28px;
   padding-right: 62px;
   text-align: left;
@@ -680,6 +677,8 @@ img {
   transform: translate(-50%, -50%);
   background-color: #ffffff;
   opacity: 1;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
   transition: transform 500ms cubic-bezier(0.4, 0, 0.2, 1), 
     opacity 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -709,6 +708,7 @@ img {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close-btn:hover {
@@ -722,31 +722,30 @@ img {
   line-height: 1.15;
   text-align: center;
   letter-spacing: 0.03em;
-  color: #212121;
-}
-
-.person-form-label {
-  display: block;
-  margin-bottom: 10px;
+  color: var(--secondary-text-color);
 }
 
 .person-label-text {
+  display: block;
+  margin-bottom: 4px;
   font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.01em;
-  color: #757575;
 }
 
 .person-form-input-wrapper {
   position: relative;
   display: block;
-  margin-top: 4px;
+  height: 40px;
+  padding: 0;
+  margin-bottom: 10px;
 }
 
 .person-form-input {
-  width: 100%;
-  height: 40px;
+  width: 100%;  
+  height: 100%;
+  padding: 0;
   padding-left: 42px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -766,20 +765,16 @@ img {
   position: absolute;
   top: 50%;
   left: 15px;
+  padding: 0;
   transform: translateY(-50%);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.person-form-label-message {
-  display: block;
-  margin-bottom: 20px;
 }
 
 .person-form-message {
   width: 100%;
   height: 120px;
   padding: 12px 16px;
-  margin-top: 4px;
+  margin-bottom: 20px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   resize: none;
@@ -804,7 +799,6 @@ img {
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
-  color: #757575;
 }
 
 .person-checkbox-label-text > a {
@@ -821,8 +815,8 @@ img {
   display: inline-block;
   height: 15px;
   width: 16px;
-  margin-right: 9px;
-  border: 1px solid #212121;
+  margin-right: 7px;
+  outline: 1px solid #212121;
   cursor: pointer;
   content: "";
 }
@@ -832,7 +826,6 @@ img {
 }
 
 .person-form-checkbox:checked + .person-checkbox-label::before {
-  border: none;
   outline: none;
   background-image: url("../images/check.svg");
 }
